@@ -1,5 +1,17 @@
 # DesignLogic
 
+**Executable AI Governance**
+
+Building structured, auditable AI systems through governed workflows and automation.
+
+---
+
+⚡ Status:
+- Actively seeking AI Workflow / Automation roles
+- Building DesignLogic as a system-focused AI consulting and tooling practice
+
+---
+
 Version: 0.1  
 Status: Active Development
 
