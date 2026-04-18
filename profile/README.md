@@ -106,3 +106,18 @@ DesignLogic is focused on building AI systems that are:
 ---
 
 👉 Explore the SDE repository to see the working system.
+
+## Work With Me
+
+I am currently:
+
+- Seeking roles in AI workflow engineering, automation, or applied AI systems
+- Open to freelance / contract work for structured AI workflow design
+- Building DesignLogic as a long-term system architecture practice
+
+If you're building AI systems and need:
+- structured intake and discovery (SDE)
+- reliable workflow design
+- governed AI execution
+
+Reach out.
