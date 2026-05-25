@@ -1,123 +1,270 @@
 # DesignLogic
 
-**Executable AI Governance**
+**Semantic backend infrastructure for AI systems.**
 
-Building structured, auditable AI systems through governed workflows and automation.
+DesignLogic builds systems that transform ambiguous intent into structured, reviewed, versioned, and execution-ready artifacts for humans, AI builders, workflows, agents, and validation systems.
 
----
+As AI systems become better at execution, the bottleneck moves upstream:
 
-⚡ Status:
-- Actively seeking AI Workflow / Automation roles
-- Building DesignLogic as a system-focused AI consulting and tooling practice
+> What exactly should the AI system execute, from what source, under what boundaries, with what review state, and with what handoff artifact?
 
----
-
-Version: 0.1  
-Status: Active Development
+DesignLogic focuses on that middle layer.
 
 ---
 
 ## What DesignLogic Is
 
-DesignLogic is a structured approach to building AI workflows and automation systems that prioritize clarity, control, and inspectability over ad hoc prompting.
+DesignLogic is building a public architecture, framework, and app layer for semantic backend systems.
 
-The goal is simple:
+The core pattern is:
 
-> turn ambiguous ideas into structured, traceable, and governable systems
+```text
+ambiguous intent
+-> semantic structuring
+-> reviewable artifacts
+-> versioned definitions
+-> bounded handoff
+-> traceable downstream use
+````
 
----
-
-## Start Here — SDE (Structured Discovery Engine)
-
-The primary working system is:
-
-→ **SDE (Structured Discovery Engine)**
-
-SDE is a workflow that:
-
-- takes vague business input  
-- validates and normalizes it  
-- generates structured discovery questions  
-- produces outputs in Markdown, JSON, and LaTeX  
-- includes validation and failure diagnostics  
-
-SDE focuses on **clarity before execution**, forcing definition before any system is built.
+DesignLogic is not focused on ad hoc prompting. It is focused on structured semantic workflows that preserve source boundaries, authority limits, review states, and execution context.
 
 ---
 
-## Repository Structure
+## Public Structure
 
-DesignLogic is organized into three areas:
+DesignLogic is organized into five public surfaces:
 
-### APPLIED
+```text
+designlogic-systems/
+├─ papers
+├─ designlogic-architecture
+├─ designlogic-framework
+├─ designlogic-apps
+└─ .github
+```
 
-Concrete tools designed to perform real work.
+### `papers`
 
-- `SDE` — Structured Discovery Engine (implemented)  
-- `AFE` — Adaptive Follow-Up Engine (planned)  
-- `DTPL` — Decision Trace & Protection Layer (planned)  
-- `AGBE` — AI Governance Blueprint Engine (planned)  
+Research papers and source materials for DesignLogic semantic backend systems.
+
+Current papers:
+
+* **Semantic Footprints**
+
+  * Governed semantic component libraries and pre-runtime semantic footprinting for agentic AI workflows.
+* **From Structured AI Workflows to Governed Semantic Models**
+
+  * A traceable pipeline from evaluated AI workflow behavior to reviewed datasets and governed semantic models.
+
+### `designlogic-architecture`
+
+The public architecture layer for DesignLogic.
+
+This repo introduces **DesignLogic Semantic Runtime Architecture**, the public-facing architecture derived from internal USS research and development.
+
+Purpose:
+
+```text
+Define the semantic backend architecture behind DesignLogic systems.
+```
+
+### `designlogic-framework`
+
+The applied framework layer for DesignLogic.
+
+This repo contains reusable methods, structures, and standards such as:
+
+* lenses
+* SDS
+* artifact contracts
+* authority boundaries
+* handoff patterns
+* verification supports
+* DSVH / PASDA
+* Lens-to-GSM model-pipeline concepts
+
+Purpose:
+
+```text
+Turn the architecture into repeatable framework modules.
+```
+
+### `designlogic-apps`
+
+The product and app layer for DesignLogic.
+
+The flagship app is **DesignLogic Workbench**.
+
+DesignLogic Workbench is an **App Definition Workbench** that structures messy app ideas into reviewed, versioned, builder-ready definition artifacts.
+
+Purpose:
+
+```text
+Prove the framework through working apps and capabilities.
+```
+
+### `.github`
+
+The public organization profile and navigation layer for DesignLogic.
 
 ---
 
-### SRL (Shared Realization Layer)
+## First Flagship Product: DesignLogic Workbench
 
-Reusable structural components that support how tools are built.
+DesignLogic Workbench, abbreviated **DLWB**, is the first flagship DesignLogic app.
 
-- shared schemas  
-- operator structures  
-- system patterns  
+DLWB is an app for structuring apps before they are built.
+
+It is designed to help users move from:
+
+```text
+messy app idea / source material
+```
+
+to:
+
+```text
+reviewed app definition
+-> versioned artifact
+-> builder-ready handoff
+```
+
+Core workflow:
+
+```text
+RawSourceMaterial
+-> CandidateDefBlock
+-> ReviewedDefBlock
+-> LensLayerGroup
+-> AppSDSProposal
+-> MRDCCoverageResult
+-> DefinitionVersion
+-> ExecutableArtifactPackage
+```
+
+DLWB is not positioned as a generic app builder. It is the app-definition layer before AI app builders, human developers, agents, or workflows execute.
 
 ---
 
-### VERIFICATION
+## Platform Thesis
 
-Structures for testing, inspecting, and validating system behavior.
+AI execution is becoming easier.
+
+AI definition is still fragile.
+
+Many systems move too quickly from:
+
+```text
+user prompt
+-> model interpretation
+-> generated output or action
+```
+
+DesignLogic inserts a semantic backend layer:
+
+```text
+user intent
+-> structured definition
+-> review boundary
+-> versioned artifact
+-> bounded execution context
+```
+
+The long-term DesignLogic platform can support:
+
+* standalone apps
+* embedded semantic backend capabilities
+* workflow nodes
+* APIs
+* AI-builder handoff packets
+* verification systems
+* governed trace-to-model improvement loops
 
 ---
 
-## Example Flow
+## Research Lineage
 
-Ambiguous Idea  
-→ Structured Discovery (SDE)  
-→ Refinement (AFE)  
-→ Trace & Protection (DTPL)  
-→ Governed System Output (AGBE)
+The current public papers support two core DesignLogic claims:
+
+```text
+Semantic Footprints:
+govern the semantic components before runtime
+
+Governed Semantic Models:
+govern the traces, dataset admission, and model pathway after runtime
+```
+
+Together:
+
+```text
+govern the parts before runtime
+-> govern the evidence after runtime
+-> support bounded semantic capabilities
+```
 
 ---
 
 ## Current Status
 
-- SDE is implemented and operational  
-- Additional tools are defined but not yet implemented  
-- The system is actively evolving  
+Status: Draft / proof-slice development
+Review Status: review_required
+Delivery Ready: false
+Production Ready: false
+Market Validated: false
+
+DesignLogic is currently organizing its public architecture, framework, app, and research surfaces.
+
+The first product focus is:
+
+```text
+DesignLogic Workbench v0_1 working proof slice
+```
 
 ---
 
-## Summary
+## Evidence Boundary
 
-DesignLogic is focused on building AI systems that are:
+DesignLogic public materials may establish:
 
-- structured  
-- inspectable  
-- repeatable  
-- grounded in defined inputs rather than assumptions  
+```text
+architecture framing
+framework direction
+research lineage
+prototype direction
+proof-slice intent
+```
+
+They do not yet establish:
+
+```text
+production readiness
+market validation
+customer acceptance
+legal compliance
+security certification
+model quality
+runtime governance enforcement
+deployment approval
+```
+
+Core boundary:
+
+```text
+Architecture coherence is not implementation proof.
+Product thesis is not market validation.
+Trace is not proof.
+Model output is not authority.
+Handoff is not deployment.
+```
 
 ---
 
-👉 Explore the SDE repository to see the working system.
+## Contact
 
-## Work With Me
+**Robert Hansen**
+DesignLogic
+GitHub: [designlogic-robert](https://github.com/designlogic-robert)
+LinkedIn: [Robert Hansen](https://www.linkedin.com/in/roberthansen-ai)
 
-I am currently:
-
-- Seeking roles in AI workflow engineering, automation, or applied AI systems
-- Open to freelance / contract work for structured AI workflow design
-- Building DesignLogic as a long-term system architecture practice
-
-If you're building AI systems and need:
-- structured intake and discovery (SDE)
-- reliable workflow design
-- governed AI execution
-
-Reach out.
+This should be the next clean public-facing step.
