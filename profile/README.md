@@ -264,7 +264,5 @@ Handoff is not deployment.
 
 **Robert Hansen**
 DesignLogic
-GitHub: [designlogic-robert](https://github.com/designlogic-robert)
-LinkedIn: [Robert Hansen](https://www.linkedin.com/in/roberthansen-ai)
-
-This should be the next clean public-facing step.
+- GitHub: [designlogic-robert](https://github.com/designlogic-robert)
+- LinkedIn: [Robert Hansen](https://www.linkedin.com/in/roberthansen-ai)
