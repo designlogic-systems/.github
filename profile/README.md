@@ -1,268 +1,122 @@
 # DesignLogic
 
-**Semantic backend infrastructure for AI systems.**
+AI can make work look finished before the meaning is stable.
 
-DesignLogic builds systems that transform ambiguous intent into structured, reviewed, versioned, and execution-ready artifacts for humans, AI builders, workflows, agents, and validation systems.
+That is the gap DesignLogic works in.
 
-As AI systems become better at execution, the bottleneck moves upstream:
+The hard part is not getting a model to produce text. The hard part is preserving source meaning, review boundaries, unresolved questions, trace, and handoff limits before AI-assisted work turns into downstream action.
 
-> What exactly should the AI system execute, from what source, under what boundaries, with what review state, and with what handoff artifact?
+DesignLogic builds public architecture, framework, and app-definition surfaces for that problem.
 
-DesignLogic focuses on that middle layer.
+## What DesignLogic Works On
 
----
+DesignLogic is focused on semantic backend infrastructure for AI-assisted systems.
 
-## What DesignLogic Is
-
-DesignLogic is building a public architecture, framework, and app layer for semantic backend systems.
-
-The core pattern is:
+That means structure around the output:
 
 ```text
-ambiguous intent
--> semantic structuring
--> reviewable artifacts
--> versioned definitions
--> bounded handoff
--> traceable downstream use
-````
-
-DesignLogic is not focused on ad hoc prompting. It is focused on structured semantic workflows that preserve source boundaries, authority limits, review states, and execution context.
-
----
-
-## Public Structure
-
-DesignLogic is organized into five public surfaces:
-
-```text
-designlogic-systems/
-├─ papers
-├─ designlogic-architecture
-├─ designlogic-framework
-├─ designlogic-apps
-└─ .github
-```
-
-### `papers`
-
-Research papers and source materials for DesignLogic semantic backend systems.
-
-Current papers:
-
-* **Semantic Footprints**
-
-  * Governed semantic component libraries and pre-runtime semantic footprinting for agentic AI workflows.
-* **From Structured AI Workflows to Governed Semantic Models**
-
-  * A traceable pipeline from evaluated AI workflow behavior to reviewed datasets and governed semantic models.
-
-### `designlogic-architecture`
-
-The public architecture layer for DesignLogic.
-
-This repo introduces **DesignLogic Semantic Runtime Architecture**, the public-facing architecture derived from internal USS research and development.
-
-Purpose:
-
-```text
-Define the semantic backend architecture behind DesignLogic systems.
-```
-
-### `designlogic-framework`
-
-The applied framework layer for DesignLogic.
-
-This repo contains reusable methods, structures, and standards such as:
-
-* lenses
-* SDS
-* artifact contracts
-* authority boundaries
-* handoff patterns
-* verification supports
-* DSVH / PASDA
-* Lens-to-GSM model-pipeline concepts
-
-Purpose:
-
-```text
-Turn the architecture into repeatable framework modules.
-```
-
-### `designlogic-apps`
-
-The product and app layer for DesignLogic.
-
-The flagship app is **DesignLogic Workbench**.
-
-DesignLogic Workbench is an **App Definition Workbench** that structures messy app ideas into reviewed, versioned, builder-ready definition artifacts.
-
-Purpose:
-
-```text
-Prove the framework through working apps and capabilities.
-```
-
-### `.github`
-
-The public organization profile and navigation layer for DesignLogic.
-
----
-
-## First Flagship Product: DesignLogic Workbench
-
-DesignLogic Workbench, abbreviated **DLWB**, is the first flagship DesignLogic app.
-
-DLWB is an app for structuring apps before they are built.
-
-It is designed to help users move from:
-
-```text
-messy app idea / source material
-```
-
-to:
-
-```text
-reviewed app definition
--> versioned artifact
--> builder-ready handoff
-```
-
-Core workflow:
-
-```text
-RawSourceMaterial
--> CandidateDefBlock
--> ReviewedDefBlock
--> LensLayerGroup
--> AppSDSProposal
--> MRDCCoverageResult
--> DefinitionVersion
--> ExecutableArtifactPackage
-```
-
-DLWB is not positioned as a generic app builder. It is the app-definition layer before AI app builders, human developers, agents, or workflows execute.
-
----
-
-## Platform Thesis
-
-AI execution is becoming easier.
-
-AI definition is still fragile.
-
-Many systems move too quickly from:
-
-```text
-user prompt
--> model interpretation
--> generated output or action
-```
-
-DesignLogic inserts a semantic backend layer:
-
-```text
-user intent
+source material
 -> structured definition
 -> review boundary
 -> versioned artifact
--> bounded execution context
-```
+-> builder-ready handoff
+````
 
-The long-term DesignLogic platform can support:
+The point is not to make AI sound more confident.
 
-* standalone apps
-* embedded semantic backend capabilities
-* workflow nodes
-* APIs
-* AI-builder handoff packets
-* verification systems
-* governed trace-to-model improvement loops
+The point is to make AI-assisted work easier to inspect before anyone treats it as correct, approved, executable, or ready.
 
----
+## Public Repository Map
 
-## Research Lineage
+| Repository                                                                                  | Purpose                                                                                                                   |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [designlogic-architecture](https://github.com/designlogic-systems/designlogic-architecture) | Public architecture layer for DesignLogic Semantic Runtime Architecture.                                                  |
+| [designlogic-framework](https://github.com/designlogic-systems/designlogic-framework)       | Reusable framework surfaces for lenses, definition artifacts, authority boundaries, verification, and handoff structures. |
+| [designlogic-apps](https://github.com/designlogic-systems/designlogic-apps)                 | App and product layer. The first documented app context is DesignLogic Workbench / DLWB.                                  |
+| [papers](https://github.com/designlogic-systems/papers)                                     | Public papers and writing connected to DesignLogic’s semantic runtime and AI workflow work.                               |
+| [.github](https://github.com/designlogic-systems/.github)                                   | Organization profile and shared public guidance, including the DesignLogic Writing Standard.                              |
 
-The current public papers support two core DesignLogic claims:
+## DesignLogic Workbench
 
-```text
-Semantic Footprints:
-govern the semantic components before runtime
+DesignLogic Workbench, or DLWB, is the first flagship app context documented in the public DesignLogic repo system.
 
-Governed Semantic Models:
-govern the traces, dataset admission, and model pathway after runtime
-```
+DLWB is an App Definition Workbench.
 
-Together:
+It is designed around a simple operational problem: people often bring messy ideas, notes, transcripts, prompts, or project fragments to AI systems and receive something that reads better than it is understood.
+
+DLWB’s intended pattern is different:
 
 ```text
-govern the parts before runtime
--> govern the evidence after runtime
--> support bounded semantic capabilities
+messy source material
+-> CandidateDefBlocks
+-> reviewed definition material
+-> App SDS proposal
+-> coverage and gap review
+-> DefinitionVersion
+-> builder-ready handoff
 ```
 
----
+That flow is documented as a public app-definition and proof-slice direction.
 
-## Current Status
+It is not a claim that DLWB is implemented, production-ready, deployed, customer-validated, or investor-validated.
 
-Status: Draft / proof-slice development
-Review Status: review_required
-Delivery Ready: false
-Production Ready: false
-Market Validated: false
+## How To Read These Repos
 
-DesignLogic is currently organizing its public architecture, framework, app, and research surfaces.
+Start here:
 
-The first product focus is:
+1. [designlogic-architecture](https://github.com/designlogic-systems/designlogic-architecture) for the public architecture frame.
+2. [designlogic-framework](https://github.com/designlogic-systems/designlogic-framework) for reusable surfaces and boundary concepts.
+3. [designlogic-apps](https://github.com/designlogic-systems/designlogic-apps) for the app/product layer and DLWB.
+4. [papers](https://github.com/designlogic-systems/papers) for longer public writing.
+
+The repos are meant to be read as a layered public system:
 
 ```text
-DesignLogic Workbench v0_1 working proof slice
+Architecture
+-> Framework
+-> Apps
+-> Papers and examples
 ```
 
----
+They are not presented as implementation proof.
 
-## Evidence Boundary
+## Current Maturity Boundary
 
-DesignLogic public materials may establish:
+DesignLogic’s public repos document the architecture, framework, app-definition surfaces, examples, and proof-slice direction.
+
+They do not prove:
+
+* production readiness
+* deployment readiness
+* market validation
+* customer acceptance
+* investor validation
+* runtime governance enforcement
+* legal or security certification
+* model quality
+* completed product implementation
+
+Those boundaries matter.
+
+A repo can make work more inspectable without proving the work is finished.
+
+## Writing Standard
+
+DesignLogic writing follows the same principle the system is built around:
 
 ```text
-architecture framing
-framework direction
-research lineage
-prototype direction
-proof-slice intent
+Meaning has to survive AI-assisted transformation.
 ```
 
-They do not yet establish:
+The public writing should not sound like generic AI startup copy. It should preserve the real claim, the source meaning, the operating boundary, and the maturity posture.
 
-```text
-production readiness
-market validation
-customer acceptance
-legal compliance
-security certification
-model quality
-runtime governance enforcement
-deployment approval
-```
-
-Core boundary:
-
-```text
-Architecture coherence is not implementation proof.
-Product thesis is not market validation.
-Trace is not proof.
-Model output is not authority.
-Handoff is not deployment.
-```
-
----
+See: [DesignLogic Writing Standard](https://github.com/designlogic-systems/.github/blob/main/WRITING_STANDARD.md)
 
 ## Contact
 
-**Robert Hansen**
-DesignLogic
-- GitHub: [designlogic-robert](https://github.com/designlogic-robert)
-- LinkedIn: [Robert Hansen](https://www.linkedin.com/in/roberthansen-ai)
+DesignLogic is operated by Robert Hansen.
+
+* [Robert Hansen GitHub](https://github.com/designlogic-robert)
+* [LinkedIn](https://www.linkedin.com/in/roberthansen-ai)
+
+```
