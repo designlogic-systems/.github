@@ -32,9 +32,7 @@ The point is to make AI-assisted work easier to inspect before anyone treats it 
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | [designlogic-architecture](https://github.com/designlogic-systems/designlogic-architecture) | Public architecture layer for DesignLogic Semantic Runtime Architecture.                                                  |
 | [designlogic-framework](https://github.com/designlogic-systems/designlogic-framework)       | Reusable framework surfaces for lenses, definition artifacts, authority boundaries, verification, and handoff structures. |
-| [designlogic-apps](https://github.com/designlogic-systems/designlogic-apps)                 | App and product layer. The first documented app context is DesignLogic Workbench / DLWB.                                  |
 | [papers](https://github.com/designlogic-systems/papers)                                     | Public papers and writing connected to DesignLogic’s semantic runtime and AI workflow work.                               |
-| [.github](https://github.com/designlogic-systems/.github)                                   | Organization profile and shared public guidance, including the DesignLogic Writing Standard.                              |
 
 ## DesignLogic Workbench
 
