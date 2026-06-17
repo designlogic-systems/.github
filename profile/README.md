@@ -6,7 +6,7 @@ That is the gap DesignLogic works in.
 
 The hard part is not getting a model to produce text. The hard part is preserving source meaning, review boundaries, unresolved questions, trace, and handoff limits before AI-assisted work turns into downstream action.
 
-DesignLogic builds public architecture, framework, and app-definition surfaces for that problem.
+DesignLogic builds public architecture and framework surfaces for making AI-assisted work easier to inspect before anyone treats it as correct, approved, executable, or ready.
 
 ## What DesignLogic Works On
 
@@ -19,12 +19,12 @@ source material
 -> structured definition
 -> review boundary
 -> versioned artifact
--> builder-ready handoff
-````
+-> bounded handoff
+```
 
 The point is not to make AI sound more confident.
 
-The point is to make AI-assisted work easier to inspect before anyone treats it as correct, approved, executable, or ready.
+The point is to make AI-assisted work more reviewable before it becomes something another person, team, tool, workflow, or system may rely on.
 
 ## Public Repository Map
 
@@ -34,53 +34,63 @@ The point is to make AI-assisted work easier to inspect before anyone treats it 
 | [designlogic-framework](https://github.com/designlogic-systems/designlogic-framework)       | Reusable framework surfaces for lenses, definition artifacts, authority boundaries, verification, and handoff structures. |
 | [papers](https://github.com/designlogic-systems/papers)                                     | Public papers and writing connected to DesignLogic’s semantic runtime and AI workflow work.                               |
 
-## DesignLogic Workbench
+## Current Product Direction
 
-DesignLogic Workbench, or DLWB, is the first flagship app context documented in the public DesignLogic repo system.
+DesignLogic’s current product/proof-slice direction is DesignLogic Reliance Review.
 
-DLWB is an App Definition Workbench.
-
-It is designed around a simple operational problem: people often bring messy ideas, notes, transcripts, prompts, or project fragments to AI systems and receive something that reads better than it is understood.
-
-DLWB’s intended pattern is different:
+DesignLogic Reliance Review is focused on a practical boundary:
 
 ```text
-messy source material
--> CandidateDefBlocks
--> reviewed definition material
--> App SDS proposal
--> coverage and gap review
--> DefinitionVersion
--> builder-ready handoff
+AI-shaped artifact
+-> admitted authority/source material
+-> reliance review
+-> support, gap, assumption, and authority-boundary findings
+-> review-required handoff posture
 ```
 
-That flow is documented as a public app-definition and proof-slice direction.
+The goal is to review AI-generated or AI-assisted candidate artifacts before they are relied on for production-facing work.
 
-It is not a claim that DLWB is implemented, production-ready, deployed, customer-validated, or investor-validated.
+Examples include:
+
+* AI-shaped specifications
+* implementation briefs
+* product or workflow plans
+* README or documentation drafts
+* builder handoffs
+* operational summaries
+* automation instructions
+* internal decision-support artifacts
+
+The question is not whether the artifact reads well.
+
+The question is whether the artifact preserves enough source relation, support, assumptions, unresolved questions, and authority boundaries for someone to know what can safely move forward and what still needs review.
+
+DesignLogic Reliance Review is not positioned as generic document Q&A.
+
+It is focused on reviewing candidate artifacts against admitted authority or source material before downstream reliance.
 
 ## How To Read These Repos
 
-Start here:
+Start with:
 
 1. [designlogic-architecture](https://github.com/designlogic-systems/designlogic-architecture) for the public architecture frame.
 2. [designlogic-framework](https://github.com/designlogic-systems/designlogic-framework) for reusable surfaces and boundary concepts.
-3. [designlogic-apps](https://github.com/designlogic-systems/designlogic-apps) for the app/product layer and DLWB.
-4. [papers](https://github.com/designlogic-systems/papers) for longer public writing.
+3. [papers](https://github.com/designlogic-systems/papers) for longer public writing and research lineage.
 
 The repos are meant to be read as a layered public system:
 
 ```text
 Architecture
 -> Framework
--> Apps
--> Papers and examples
+-> product/proof-slice direction
+-> papers and examples
 ```
 
 They are not presented as implementation proof.
 
 ## Current Maturity Boundary
 
-DesignLogic’s public repos document the architecture, framework, app-definition surfaces, examples, and proof-slice direction.
+DesignLogic’s public repos document architecture, framework surfaces, public writing, examples, and proof-slice direction.
 
 They do not prove:
 
@@ -116,5 +126,3 @@ DesignLogic is operated by Robert Hansen.
 
 * [Robert Hansen GitHub](https://github.com/designlogic-robert)
 * [LinkedIn](https://www.linkedin.com/in/roberthansen-ai)
-
-```
