@@ -108,16 +108,6 @@ Those boundaries matter.
 
 A repo can make work more inspectable without proving the work is finished.
 
-## Writing Standard
-
-DesignLogic writing follows the same principle the system is built around:
-
-```text
-Meaning has to survive AI-assisted transformation.
-```
-
-The public writing should not sound like generic AI startup copy. It should preserve the real claim, the source meaning, the operating boundary, and the maturity posture.
-
 See: [DesignLogic Writing Standard](https://github.com/designlogic-systems/.github/blob/main/WRITING_STANDARD.md)
 
 ## Contact
