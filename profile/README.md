@@ -108,8 +108,6 @@ Those boundaries matter.
 
 A repo can make work more inspectable without proving the work is finished.
 
-See: [DesignLogic Writing Standard](https://github.com/designlogic-systems/.github/blob/main/WRITING_STANDARD.md)
-
 ## Contact
 
 DesignLogic is operated by Robert Hansen.
